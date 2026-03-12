@@ -46,9 +46,56 @@ and “computer” becomes “omputercay"""
     return word
 
 
-pig_latin2a(): # TODO clean that up
+def pig_latin2a(word): # TODO clean that up
+    capitalize = word[0].isupper()
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    punctuation = ['.', ',', '?', '!']
+    punct = word[-1] in punctuation
+    if punct: word = word[:-1]
+    if word[0] in vowels:
+        word = word.lower()
+        word = f"{word}way"
+    else: word = f"{word[1:]}{word[0]}ay"
 
-print(pig_latin2("air."))
-print(pig_latin2("Computer."))
-print(pig_latin2("Air."))
-print(pig_latin2("computer."))
+    if capitalize: word = word.capitalize()
+    if punct: word = f"{word}."
+    return word
+
+
+def pig_latin2b(word): # TODO clean that up
+    capitalize = word[0].isupper()
+    vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'} # made it a set here
+    punctuation = ['.', ',', '?', '!']
+    punct = word[-1] in punctuation
+    if punct: word = word[:-1]
+    if(len(set(word) & vowels)>=2):
+        word = word.lower()
+        word = f"{word}way"
+    else: word = f"{word[1:]}{word[0]}ay"
+
+    if capitalize: word = word.capitalize()
+    if punct: word = f"{word}."
+    return word
+
+# print(pig_latin2b("wine"))
+# print(pig_latin2b("wind"))
+
+# 6 Do it for a sentence
+
+def pl_sentence(str):
+    str_list = str.split(" ")
+    for i, _ in enumerate(str_list):
+        print(pig_latin2a(str_list[i]), end =" ")
+
+def pl_sentence2(str):
+    output = []
+    for word in str.split(" "):
+        if word[0] in 'aeiou':
+            output.append(f"{word}way")
+        else: output.append(f"{word[1:]}{word[0]}ay")
+    return ' '.join(output)
+
+
+sentence = "this is a test translation"
+print(pl_sentence2(sentence))
+
