@@ -29,6 +29,7 @@ name = 'Ermal'
 first = 'Mal'
 last = 'Mill'
 
-print(f' {last:#>0}')
+# print(f' {last:#<6}')
 
+guessing_game()
 
