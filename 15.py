@@ -27,7 +27,7 @@ def get_rainfall():
 response_log = defaultdict(lambda: [0])
 
 def logger():
-    with open('logs.txt','r', encoding='utf-8') as file:
+    with open('etc/logs.txt', 'r', encoding='utf-8') as file:
         line_list = [line.split() for line in file]
         for list in line_list:
             response_log[list[8]].append(list[0])
@@ -40,7 +40,7 @@ def logger():
 
 def word_length():
     word_dict = {}# length : counter
-    with open('scratch.txt', 'r', encoding='utf-8') as file:
+    with open('etc/scratch.txt', 'r', encoding='utf-8') as file:
         # line_list = [word for line in file for word in line.split()]
         words = file.read().split()
         for word in words:

@@ -1,0 +1,37 @@
+[
+    {
+        "filename": "file-info.json",
+        "size": 822,
+        "date-modified": 1794174507.4453323
+    },
+    {
+        "filename": "logs.txt",
+        "size": 1634,
+        "date-modified": 1794174520.468
+    },
+    {
+        "filename": "mini-access-log.txt",
+        "size": 36562,
+        "date-modified": 1794169927.102
+    },
+    {
+        "filename": "newtxt.json",
+        "size": 7736,
+        "date-modified": 1794131382.6675465
+    },
+    {
+        "filename": "psswd.txt",
+        "size": 5450,
+        "date-modified": 1791131403.842
+    },
+    {
+        "filename": "scratch.txt",
+        "size": 40,
+        "date-modified": 1791042828.217
+    },
+    {
+        "filename": "somecsv.csv",
+        "size": 22,
+        "date-modified": 1794125804.6049047
+    }
+]

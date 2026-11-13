@@ -52,6 +52,6 @@ def vowel_counter(filename):
 
 
 
-vowel_counter('scratch.txt')
+vowel_counter('etc/scratch.txt')
 
 
